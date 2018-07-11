@@ -1,7 +1,8 @@
-require_relative "Product"
-require_relative "ProductOperation"
-
+require_relative "product"
+require_relative "productoperation"
+$id=1
 class Shopkeeper
+  def accept
   puts"1. Add product
        2. Remove the product
        3. List all products with all details and id
@@ -10,57 +11,64 @@ class Shopkeeper
   puts "Enter your Choice"
   n=gets
 
+
   case n
   when "1\n"
 
-    product=Product.new
+    product =Hash.new
 
-    puts "Enter Product_name"
-    name=gets.chomp
-    product.prod_name="#{name}"
-    puts "Enter Product_price"
-    price=gets.chomp
-    product.prod_price="#{price}"
+    puts "Enter product name"
+    prod_name = gets.chomp
+    puts "Enter product price"
+    prod_price = gets.chomp
     puts "Enter the stock"
-    stock=gets.chomp
-    product.stock_item="#{stock}"
+    stock_item=gets.chomp
     puts "Enter Company name"
-    company=gets.chomp
-    product.company_name="#{company}"
+    prod_company=gets.chomp
     puts " Enter store no"
     sr_no=gets.chomp
-    product.store_no="#{sr_no}"
+
+     product['0']=$id
+     product['prod_name']="#{prod_name}"
+     product['prod_price']="#{prod_price}"
+     product['stock_item']="#{stock_item}"
+     product['prod_company']="#{prod_company}"
+     product['sr_no']="#{sr_no}"
 
     productop=ProductOperation.new
-    productop.add_product(name,price,stock,company,sr_no)
-
+    productop.add_product(product)
+    $id+=1
 
   when "2\n"
-    product=Product.new
 
-    puts "Enter the Product id"
+    file = File.open("product.txt", "a")
+    my_hash = File.foreach("product.txt") { |f| print f }
+    puts my_hash
+
+    puts "Enter the Product id to remove"
     id=gets
-    product.prod_id="#{id}"
-
      productop=ProductOperation.new
-     productop.remove(id)
-  when "3\n"
+     productop.remove_product(id)
 
+  when "3\n"
      productop=ProductOperation.new
      productop.list_product
-  when "4\n"
-     product=Product.new
 
+  when "4\n"
+
+    file = File.open("product.txt", "a")
+    my_hash = File.foreach("product.txt") { |f| print f }
+    puts my_hash
     puts "Enter the Product name"
     name=gets
-    product.prod_name="#{name}"
-
+     productop=ProductOperation.new
+     productop.search_product(name)
   when "5\n"
-     product=Product.new
 
     puts "Enter the Product id"
     id=gets
     product.prod_id="#{id}"
+  end
   end
 end
 

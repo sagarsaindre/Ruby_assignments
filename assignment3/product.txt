@@ -1,2 +1,10 @@
-1    j    gh    jf    gjh    ghjgj
-1    milk    20    10    chitale    55
+{"prod_name"=>"milk", "prod_price"=>"12", "stock_item"=>"40", "prod_company"=>"chitale", "sr_no"=>"55"}
+{"prod_name"=>"hair oil", "prod_price"=>"40", "stock_item"=>"45", "prod_company"=>"parachute", "sr_no"=>"85"}
+{"prod_id"=>0, "prod_name"=>"pen ", "prod_price"=>"10", "stock_item"=>"50", "prod_company"=>"renolds", "sr_no"=>"55"}
+{"prod_id"=>0, "prod_name"=>"dfg", "prod_price"=>"dfg", "stock_item"=>"fh", "prod_company"=>"fh", "sr_no"=>"fgh"}
+{0=>0, 1=>"fdgh", "prod_price"=>"fhg", "stock_item"=>"fh", "prod_company"=>"fh", "sr_no"=>"fgh"}
+{"0"=>0, "1"=>"dfg", "prod_price"=>"fdgh", "stock_item"=>"fhg", "prod_company"=>"fhg", "sr_no"=>"h"}
+
+{"0"=>1, "prod_name"=>"fghj", "prod_price"=>"g hjn fgj", "stock_item"=>"ghj", "prod_company"=>"gfhj", "sr_no"=>"fj"}
+{"0"=>1, "prod_name"=>"ghjgj", "prod_price"=>"gj", "stock_item"=>"gjh", "prod_company"=>"gj", "sr_no"=>"gj"}
+{"0"=>1, "prod_name"=>"fdgh", "prod_price"=>"fdgh", "stock_item"=>"fgh", "prod_company"=>"fgh", "sr_no"=>"fhg"}

@@ -1,0 +1,3 @@
+question={"question1"=>{"id"=>"1", "question"=>" Our personalities developed as a result of ______________________ .   ", "A"=>"genetic inheritance ", "B"=>"environmental influences ","c"=>"both of the above  ", "D"=>"None "},
+ "question2"=>{"id"=>"2", "question"=>"  Which of the following things can have an effect on the development of an individual's personality?
+    ", "A"=>"physical and mental capabilities  ", "B"=>"health and physical appearance  ","c"=>"skin color, gender, and sexual orientation ", "D"=>"all of the above "}}
